@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import api from "../api";
+import Task from "../components/Task";
 
 function Home() {
     const [tasks, setTasks] = useState([]);
@@ -48,6 +49,9 @@ function Home() {
         <div>
             <div>
                 <h2>Tasks</h2>
+                {tasks.map((task) => (
+                    <Task task={task} onDelete={deleteTask} key={task.id} />
+                ))}
             </div>
             <div>
                 <h2>Create a Task</h2>
