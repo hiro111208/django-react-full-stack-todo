@@ -19,6 +19,3 @@ class TaskSerializer(serializers.ModelSerializer):
         model = Task
         fields = ['id', 'title', 'content', 'created_at', 'author']
         extra_kwargs = {'author': {'read_only': True}}
-
-    def create(self, validated_data):
-        return Task.objects.create(author=self.context['request'].user, **validated_data)
