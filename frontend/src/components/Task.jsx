@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Task.css";
 
 function Task({ task, onDelete }) {
     const formattedDate = new Date(task.created_at).toLocaleDateString("en-GB");

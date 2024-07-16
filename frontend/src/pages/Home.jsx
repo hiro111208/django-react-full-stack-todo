@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../api";
 import Task from "../components/Task";
+import "../styles/Home.css";
 
 function Home() {
     const [tasks, setTasks] = useState([]);
